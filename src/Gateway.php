@@ -10,11 +10,11 @@
     * @author Marshall Miller
     * @link https://www.x.com/sites/default/files/payflowgateway_guide.pdf
     */
-    class ProGateway extends AbstractGateway
+    class PayflowProExtendedGateway extends AbstractGateway
     {
         public function getName()
         {
-            return 'Payflow_Pro_Extended';
+            return 'PayflowExtended';
         }
 
         public function addRecurringProfile(Array $parameters = array()) 
