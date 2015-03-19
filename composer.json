@@ -1,0 +1,35 @@
+{
+    "name": "th3third/omnipay-payflow-extended"
+    , "type": "library"
+    , "description": "An extended Payflow driver with recurring payments for the Omnipay payment processing library"
+    , "keywords": [
+        "gateway"
+        , "merchant"
+        , "omnipay"
+        , "pay"
+        , "payflow"
+        , "payment"
+    ]
+    , "homepage": "https://github.com/th3third/omnipay-payflow-extended"
+    , "license": "MIT"
+    , "authors": [
+        {
+            "name": "Marshall Miller",
+            "email": "contact@marshall-miller.com"
+        }
+    ]
+    , "autoload": {
+        "psr-4": { "Omnipay\\PayflowExtended\\" : "src/" }
+    }
+    , "require": {
+        "omnipay/common": "~2.0"
+    }
+    , "require-dev": {
+        "omnipay/tests": "~2.0"
+    }
+    , "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
