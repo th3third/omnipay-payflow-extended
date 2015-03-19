@@ -1,6 +1,6 @@
 <?php 
 
-    namespace Omnipay\Payflow\ProExtended\Message;
+    namespace Omnipay\PayflowExtended\Message;
 
     use Omnipay\Payflow\Message\Response;
 
