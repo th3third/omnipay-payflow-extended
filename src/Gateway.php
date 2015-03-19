@@ -19,6 +19,6 @@
 
         public function addRecurringProfile(Array $parameters = array()) 
         {
-            return $this->createRequest('\Omnipay\Payflow\ProExtended\Message\RecurringBillingRequest', $parameters);
+            return $this->createRequest('\Omnipay\PayflowExtended\Message\RecurringBillingRequest', $parameters);
         }
     }

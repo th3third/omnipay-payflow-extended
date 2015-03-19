@@ -5,7 +5,7 @@
     use Omnipay\Common\CreditCard;
     use Omnipay\Tests\GatewayTestCase;
 
-    class ProExtendedGatewayTest extends GatewayTestCase
+    class PayflowExtendedGatewayTest extends GatewayTestCase
     {
         public function setUp()
         {
