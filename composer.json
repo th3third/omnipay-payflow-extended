@@ -19,7 +19,7 @@
         }
     ]
     , "autoload": {
-        "psr-4": { "Omnipay\\PayflowExtended" : "src/" }
+        "psr-4": { "Omnipay\\PayflowExtended\\" : "src/" }
     }
     , "require": {
         "omnipay/common": "~2.0"
