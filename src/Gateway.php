@@ -1,6 +1,6 @@
 <?php
 
-    namespace Omnipay\Payflow;
+    namespace Omnipay\PayflowExtended;
 
     use Omnipay\Payflow\ProGateway;
 
@@ -10,7 +10,7 @@
     * @author Marshall Miller
     * @link https://www.x.com/sites/default/files/payflowgateway_guide.pdf
     */
-    class ProExtendedGateway extends ProGateway
+    class Gateway extends ProGateway
     {
         public function getName()
         {
