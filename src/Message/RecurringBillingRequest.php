@@ -1,6 +1,6 @@
 <?php 
 
-    namespace Omnipay\PayflowExtended\Message;
+    namespace Omnipay\Payflow\ProExtended\Message;
 
     use Omnipay\Payflow\Message\AuthorizeRequest;
 

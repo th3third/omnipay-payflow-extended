@@ -32,16 +32,17 @@
 
             $response = $this->gateway->addRecurringProfile($this->options)->send();
 
-            $this->assertTrue($response->isProfileActionSuccessful());
-            $this->assertEquals('RT0000000012', $response->getProfileID());
-            $this->assertEquals('R1056BE9039C', $response->getProfileReference());
-
             $this->assertTrue($response->isSuccessful());
-            $this->assertEquals('B70E6A323E14', $response->getTransactionReference());
+            $this->assertEquals('A10A6AE7042E', $response->getTransactionReference());
         }
 
         public function testAddRecurringProfileErrorError()
         {
+            $this->setMockHttpResponse('AddRecurringProfileFailure.txt');
 
+            $response = $this->gateway->addRecurringProfile($this->options)->send();
+
+            $this->assertFalse($response->isSuccessful());
+            $this->assertSame('User authentication failed', $response->getMessage());
         }
     }
