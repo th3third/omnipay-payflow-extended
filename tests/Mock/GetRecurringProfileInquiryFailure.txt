@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Connection: close
+Server: VPS-3.033.00
+Date: Tue, 11 Feb 2014 02:34:58 GMT
+Content-type: text/namevalue
+Content-length: 43
+
+RESULT=1&RESPMSG=User authentication failed
