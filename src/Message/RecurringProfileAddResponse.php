@@ -4,15 +4,8 @@
 
     use Omnipay\Payflow\Message\Response;
 
-    class RecurringProfileAddResponse extends Response {
-
-    	/* uncomment to debug the raw response from Paypal
-        public function __construct(\Omnipay\Common\Message\RequestInterface $request, $data) {
-        	\Log::debug(__METHOD__.':: Paypal Response: '.$data);
-        	parent::__construct($request,$data);
-    	}
-    	*/
-    	
+    class RecurringProfileAddResponse extends Response 
+    {    	
     	// this is the optional sale or authorization transaction
         public function isSuccessful()
         {
@@ -28,7 +21,7 @@
     	// this is the optional sale or authorization transaction
         public function getMessage()
         {
-            return isset($this->data['TRXRESPMSG']) ? $this->data['TRXRESPMSG'] : null;
+            return isset($this->data['RESPMSG']) ? $this->data['RESPMSG'] : null;   
         }
 
         // this is for the profile action
@@ -38,18 +31,14 @@
         }
 
         // this is for the profile action
-    	public function getProfileReference() {
+    	public function getProfileReference() 
+        {
             return isset($this->data['RPREF']) ? $this->data['RPREF'] : null;		
     	}
 
         // this is for the profile action
-    	public function getProfileID() {
+    	public function getProfileID() 
+        {
             return isset($this->data['PROFILEID']) ? $this->data['PROFILEID'] : null;		
     	}
-
-        // this is for the profile action
-    	public function getProfileMessage() {
-            return isset($this->data['RESPMSG']) ? $this->data['RESPMSG'] : null;		
-    	}
-
     }

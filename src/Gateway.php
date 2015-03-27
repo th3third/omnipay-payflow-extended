@@ -22,8 +22,18 @@
             return $this->createRequest('\Omnipay\PayflowExtended\Message\RecurringProfileAddRequest', $parameters);
         }
 
-        public function getRecurringProfileDetails(Array $parameters = array())
+        public function recurringProfileInquiry(Array $parameters = array())
         {
             return $this->createRequest('\Omnipay\PayflowExtended\Message\RecurringProfileInquiryRequest', $parameters);
+        }
+
+        public function deactivateRecurringProfile(Array $parameters = array())
+        {
+            return $this->createRequest('\Omnipay\PayflowExtended\Message\RecurringProfileDeactivateRequest', $parameters);
+        }
+
+        public function updateRecurringProfile(Array $parameters = array())
+        {
+            return $this->createRequest('\Omnipay\PayflowExtended\Message\RecurringProfileUpdateRequest', $parameters);
         }
     }

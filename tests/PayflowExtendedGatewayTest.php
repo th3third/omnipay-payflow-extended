@@ -40,21 +40,41 @@
             $this->assertSame('User authentication failed', $response->getProfileMessage());
         }
 
-        public function testGetRecurringProfileInquirySuccess()
+        public function testRecurringProfileInquirySuccess()
         {
-            $this->setMockHttpResponse('GetRecurringProfileInquirySuccess.txt');
+            $this->setMockHttpResponse('RecurringProfileInquirySuccess.txt');
 
-            $response = $this->gateway->getRecurringProfileInquiry($this->options)->send();
+            $response = $this->gateway->recurringProfileInquiry($this->options)->send();
 
             $this->assertTrue($response->isSuccessful());
             $this->assertEquals('Approved', $response->getMessage());
         }
 
-        public function testGetRecurringProfileInquiryFailure()
+        public function testRecurringProfileInquiryFailure()
         {
-            $this->setMockHttpResponse('GetRecurringProfileInquiryFailure.txt');
+            $this->setMockHttpResponse('RecurringProfileInquiryFailure.txt');
 
-            $response = $this->gateway->getRecurringProfileInquiry($this->options)->send();
+            $response = $this->gateway->recurringProfileInquiry($this->options)->send();
+
+            $this->assertFalse($response->isSuccessful());
+            $this->assertSame('User authentication failed', $response->getMessage());
+        }
+
+        public function testDeactivateRecurringProfileSuccess()
+        {
+            $this->setMockHttpResponse('DeactivateRecurringProfileSuccess.txt');
+
+            $response = $this->gateway->deactivateRecurringProfile($this->options)->send();
+
+            $this->assertTrue($response->isSuccessful());
+            $this->assertEquals('Approved', $response->getMessage());
+        }
+
+        public function testDeactivateRecurringProfileFailure()
+        {
+            $this->setMockHttpResponse('DeactivateRecurringProfileFailure.txt');
+
+            $response = $this->gateway->deactivateRecurringProfile($this->options)->send();
 
             $this->assertFalse($response->isSuccessful());
             $this->assertSame('User authentication failed', $response->getMessage());

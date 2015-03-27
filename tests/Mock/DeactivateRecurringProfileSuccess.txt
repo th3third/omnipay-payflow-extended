@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Connection: close
+Server: VPS-3.033.00
+Date: Tue, 11 Feb 2014 02:34:58 GMT
+Content-type: text/namevalue
+Content-length: 101
+
+RESULT=0&RESPMSG=Approved&RPREF=RRRF0A08BD4D&PROFILEID=I-26F60651P9935932P&CORRELATIONID=f87c07be9f95
