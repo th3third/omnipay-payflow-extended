@@ -10,6 +10,6 @@
 
         public function isSuccessful()
         {
-            return isset($this->data['RESULT']) && '0' === $this->data['RESULT'];
+            return isset($this->data['RESULT']) && ('0' === $this->data['RESULT'] || '33' === $this->data['RESULT']);
         }
     }
